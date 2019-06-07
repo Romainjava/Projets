@@ -1,0 +1,617 @@
+* {
+	font-family: 'Palanquin', sans-serif;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	/* 	color: #964F4D;*/
+	color: rgba(255, 255, 255, 1.00);
+	font-family: "LetterGothicStdBold", "Helvetica Neue", Arial, sans-serif
+}
+
+#conteneurPrincipal {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+	left: 15px;
+	overflow: hidden;
+}
+
+#fleches_nav {
+	bottom: 30px;
+	right: 30px;
+	position: absolute;
+	z-index: 2000;
+}
+
+#fleche_prev,
+#fleche_suiv {
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	margin: 0 4px;
+}
+
+#fleche_prev img {}
+
+#fleches_nav img {
+	cursor: pointer;
+	display: none;
+	fill: #FFFFFF;
+}
+
+.page {
+	display: none;
+}
+
+.page.active {
+	display: block;
+
+}
+
+h1,
+h2 {
+	margin: 0 10px;
+	padding: 0 20px 10px 20px;
+	font-size: 2em;
+	line-height: 2.2em;
+	font-weight: bold;
+}
+
+p {
+	text-align: center;
+	font-size: 1.350em;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: underline;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* ******************************* PAGE 0 ****************************** */
+#page_0 {
+	height: 100%;
+	background: #FFFFFF;
+	background-size: cover;
+	overflow: auto;
+	width: 101%;
+	padding-right: 20px;
+	line-height: 0;
+}
+
+#basPageZero {
+	height: 1px;
+	width: 100%;
+	display: block;
+	position: relative
+}
+
+#imgCit1,
+#imgCit2,
+#imgCit3,
+#imgCit4,
+#imgCit2Inverse {
+	background: #FFFFFF;
+	display: inline;
+	width: 50%;
+}
+
+.citation {
+	width: 90%;
+	padding: 40vh 5% 20px;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: 3px;
+}
+
+.auteurCitation {
+	font-size: 18px;
+	text-align: right;
+	padding: 10px 10% 40vh;
+}
+
+/* ****************************** PAGE 1 ****************************** */
+#page_1 {
+	height: 100%;
+	/* 	background:url(../images/prevVideo.jpg) 50% 50% no-repeat;
+ */
+	background-size: cover;
+}
+
+
+
+#pourquoiChuck,
+#nousConnaitre {
+	background: rgba(0, 0, 0, 1.00);
+	height: 6vh;
+	padding: 1% 0;
+	line-height: 6vh;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+	margin: auto;
+}
+
+#pourquoiChuck {
+	top: 0;
+}
+
+#nousConnaitre {
+	bottom: 0;
+}
+
+#pourquoiChuck img,
+#nousConnaitre img {
+	opacity: 0.5;
+	padding: 0 2%;
+}
+
+#videoBackGroundContainer {
+	height: 100%;
+
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#videoBackGround {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	opacity: 0;
+}
+
+
+
+#videoBackGround {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#videoBackGround {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* 1. Pas de support d'object-fit */
+@media (min-aspect-ratio: 16/9) {
+	#videoBackGround {
+		height: 300%;
+		top: -100%;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	#videoBackGround {
+		width: 300%;
+		left: -100%;
+	}
+
+
+	#imgCit1,
+	#imgCit2,
+	#imgCit3,
+	#imgCit4,
+	#imgCit2Inverse {
+		width: 100%;
+	}
+
+
+}
+
+/* 2. En cas de support d'object-fit, écrase les règles en (1) */
+@supports (object-fit: cover) {
+	#videoBackGround {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.cuk {
+	animation: move 3s infinite ease-out;
+	-webkit-animation: move 3s infinite ease-out;
+	margin-left: -15px;
+}
+
+@keyframes move {
+
+	0% {
+		transform: translateY(-100px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+
+	70% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(100px);
+	}
+}
+
+@-webkit-keyframes move {
+
+	0% {
+		transform: translateY(-100px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+
+	70% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(100px);
+	}
+}
+
+.inverse {
+	animation: inverse 3s infinite ease-out;
+	-webkit-animation: inverse 3s infinite ease-out;
+	margin-left: -15px;
+}
+
+
+@keyframes inverse {
+
+	0% {
+		transform: translateY(100px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+
+	70% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100px);
+	}
+
+}
+
+@-webkit-keyframes inverse {
+
+	0% {
+		transform: translateY(100px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+
+	70% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+.containerLogo {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	height: 8%;
+	margin-top: 35vh;
+}
+
+.vp-controls-wrapper {
+	display: none !important;
+}
+
+.vp-controls {
+	visibility: hidden !important;
+}
+
+.gif {
+	width: 29%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#player {
+	position: absolute;
+}
+
+.sequenceLogo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.sequenceLogo.sequenceLogoActif {
+	display: block !important;
+}
+
+.antibot {
+	position: absolute;
+	left: -10000px;
+	top: -10000px;
+	z-index: -20000;
+}
+
+/* ****************************** PAGE 2 ****************************** */
+#page_2 {
+	height: 100%;
+	background: url(../images/bg02.jpg) 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.conteneurTexte {
+	position: absolute;
+	margin-left: 10%;
+	width: 80%;
+	text-align: center;
+}
+
+.textePage2,
+.inscriptionNewsletter {}
+
+.textePage2 {}
+
+.inscriptionNewsletter {
+	line-height: 1.2;
+	padding-bottom: 10px;
+}
+
+#mailNewsletter,
+#mailNewsletterSubmit {
+	font-family: 'LetterGothicStd', serif;
+	border: none;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	background-color: rgba(255, 255, 255, 0.68);
+	height: 34px;
+	padding: 0 8px;
+	display: inline;
+	margin: 0 4px 100px 4px;
+	font-size: 14px;
+}
+
+#mailNewsletter {
+	width: 300px;
+	max-width: 80%;
+}
+
+#mailNewsletterSubmit {
+	color: #333333;
+	cursor: pointer;
+}
+
+/* ****************************** PAGE 3 ****************************** */
+#page_3 {
+	height: 100%;
+	background: url(../images/fondPortfolio.jpg) 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.contactMail,
+.association {}
+
+.contactMail {}
+
+.association {}
+
+#iconSoc {
+	position: absolute;
+	bottom: 4%;
+	left: 50%;
+	margin-left: -180px !important;
+}
+
+#iconSoc a {
+	margin: 0 10px;
+}
+
+.adresse {
+	padding-top: 10vh;
+}
+
+/* ****************************** PAGE Mobile ****************************** */
+#page_mobile {
+	display: block;
+	background-color: #FFFFFF;
+	height: 100%;
+	position: absolute;
+	z-index: 4000;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#imageSwipe {
+	position: absolute;
+	width: 502px;
+	height: 390px;
+	top: 50%;
+	left: 50%;
+	margin-top: -195px;
+	margin-left: -251px;
+}
+
+/* ****************************** TRANSITIONS ****************************** */
+#panneauTransition {
+	width: 600%;
+	left: 50%;
+	margin-left: -300%;
+	height: 220vh;
+	background-color: #FFFFFF;
+	position: absolute;
+	bottom: 100vh;
+	z-index: 11000;
+}
+
+.animationPanneau {
+	transform: rotate(10deg);
+	-webkit-animation: annimationDuPanneau 0.4s;
+	/* Safari 4+ */
+	-moz-animation: annimationDuPanneau 0.4s;
+	/* Fx 5+ */
+	-o-animation: annimationDuPanneau 0.4s;
+	/* Opera 12+ */
+	animation: annimationDuPanneau 0.4s;
+	/* IE 10+, Fx 29+ */
+	-webkit-animation-fill-mode: forwards;
+	/* Chrome, Safari, Opera */
+	animation-fill-mode: forwards;
+}
+
+.reverseAnnimationPanneau {
+	transform: rotate(-10deg);
+	-webkit-animation: reverseAnnimationDuPanneau 0.4s;
+	/* Safari 4+ */
+	-moz-animation: reverseAnnimationDuPanneau 0.4s;
+	/* Fx 5+ */
+	-o-animation: reverseAnnimationDuPanneau 0.4s;
+	/* Opera 12+ */
+	animation: reverseAnnimationDuPanneau 0.4s;
+	/* IE 10+, Fx 29+ */
+	-webkit-animation-fill-mode: forwards;
+	/* Chrome, Safari, Opera */
+	animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes annimationDuPanneau {
+	0% {
+		bottom: 100vh;
+	}
+
+	100% {
+		bottom: -20vh;
+	}
+}
+
+@keyframes reverseAnnimationDuPanneau {
+	0% {
+		bottom: -100vh;
+	}
+
+	100% {
+		bottom: -240vh;
+	}
+}
+
+
+/* responsive */
+
+
+@media only screen and (max-height: 400px) {
+
+	h1,
+	h2 {
+		font-size: 1.35em;
+		line-height: 1;
+	}
+
+	p {
+		font-size: 1.15em;
+	}
+
+	#imgCit1,
+	#imgCit2,
+	#imgCit3,
+	#imgCit4,
+	#imgCit2Inverse {
+		width: 100%;
+	}
+
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+	h1,
+	h2 {
+		font-size: 1.35em;
+		line-height: 1.1;
+	}
+
+	p {
+		font-size: 1.15em;
+	}
+
+
+	#imgCit1,
+	#imgCit2,
+	#imgCit3,
+	#imgCit4,
+	#imgCit2Inverse {
+		width: 100%;
+	}
+
+
+
+}
+
+#createur {
+	position: absolute;
+	font-size: 10px;
+	left: 4px;
+	bottom: 4px;
+	color: #FFFFFF;
+	text-decoration: none;
+	list-style: none;
+}

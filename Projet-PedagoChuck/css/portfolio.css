@@ -1,0 +1,37 @@
+.portfolio .row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+@media (max-width: 1000px) {
+  .portfolio .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio .row{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+.portfolio .row figure iframe {
+max-height: 274px;
+max-width: 640px;
+}
+.portfolio h2 {
+  text-align: center;
+/*   margin-bottom: 7%; */
+  padding: 3% 0 3% 0;
+}
+
+.portfolio .row figure {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
