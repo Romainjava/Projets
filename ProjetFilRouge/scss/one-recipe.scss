@@ -1,0 +1,56 @@
+/***************** ONE RECIPE CSS ***************/
+
+.container-uneRecette {
+    display: flex;
+}
+
+.ul-ingredient-list {
+    width: 33vw;
+    justify-content: unset !important;
+}
+.ingredient-list{
+    flex-direction: column;
+    justify-content: unset !important;
+}
+.un-ingredient img {
+    width: 4vw;
+    height: 4vw;
+    object-fit: contain;
+}
+
+.uneRecette figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.uneRecette {
+    width: 100%;
+}
+
+.uneRecette figure img {
+    object-fit: contain;
+}
+
+.uneRecette figure h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.uneRecette figcaption {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.un-ingredient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.un-ingredient span {
+    width: 35%;
+}
+
+/***************** END ONE RECIPE CSS ***************/

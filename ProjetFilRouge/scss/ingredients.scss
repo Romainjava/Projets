@@ -1,0 +1,73 @@
+/************ ICI DEBUT INGREDIENTS *************/
+.container-ing {
+    display: flex;
+}
+
+.container-ing>aside {
+    width: 33vw;
+    overflow: hidden;
+    background: whitesmoke;
+    justify-content: center;
+    border: 11px solid white;
+    border-bottom: 56px solid white;
+    border-right: 10px solid white;
+}
+.ingredient article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.ingredient article figure a img {
+    width: 99%;
+}
+
+.ingredient article figure figcaption {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrap-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrap-button input {
+    width: 2vw;
+    text-align: center;
+}
+
+.ingredient article figure a img {
+    width: 22vw;
+    height: 30vh;
+    object-fit: contain;
+
+}
+
+.ingredient div button {
+    display: flex;
+    justify-content: center;
+    max-width: 1%;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 40px;
+    //  box-shadow: 0 9px #999;
+}
+
+.ingredient div button:hover {
+    background-color: #3e8e41
+}
+
+.ingredient div button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+/*************** ICI FIN INGREDIENTS ***********/
